@@ -104,7 +104,8 @@ body {
   position: fixed;
   left: 2rem;
   bottom: 2rem;
-  width: 320px; }
+  width: 320px;
+  color: #251d20; }
   .footer__text {
     font-weight: bold;
     font-size: 1.8rem;
@@ -121,11 +122,14 @@ body {
     margin-top: 3rem;
     font-size: 1.8rem;
     font-weight: 700;
-    text-decoration: underline; }
+    text-decoration: underline;
+    color: #251d20;
+    color: #251d20; }
     .footer__policy:visited, .footer__policy:active {
       color: #251d20; }
     .footer__policy:hover {
-      text-decoration: none; }
+      text-decoration: none;
+      color: #251d20; }
   @media only screen and (max-width: 1000px) {
     .footer {
       position: absolute;
