@@ -7,6 +7,7 @@
   left: 2rem;
   bottom: 2rem;
   width: 320px;
+  color: #251d20;
 
   &__text {
     font-weight: bold;
@@ -42,6 +43,7 @@
 
     &:hover {
       text-decoration: none;
+      color: $text-color;
     }
   }
 
