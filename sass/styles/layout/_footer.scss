@@ -1,0 +1,59 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+  width: 320px;
+
+  &__text {
+    font-weight: bold;
+    font-size: 1.8rem;
+
+    line-height: 25px;
+  }
+
+  &__copyright {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+  }
+
+  &__published {
+    color: $text-color;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &__policy {
+    display: inline-block;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: underline;
+
+    &:visited,
+    &:active {
+      color: $text-color;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+  }
+
+  @media only screen and (max-width: 770px) {
+    width: 100%;
+    left: 0;
+    padding: 0 30px;
+    text-align: center;
+    margin: 0 auto 40px;
+  }
+}

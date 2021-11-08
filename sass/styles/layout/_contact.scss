@@ -1,0 +1,30 @@
+.contact {
+  position: fixed;
+  top: 2rem;
+  right: 1.5rem;
+  &__link {
+    font-size: 1.8rem;
+    color: $text-color;
+    text-decoration: none;
+    font-weight: 700;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    position: absolute;
+    top: unset;
+    right: 2rem;
+    bottom: 2rem;
+  }
+
+  @media only screen and (max-width: 770px) {
+    width: 100%;
+    top: unset;
+    right: unset;
+    bottom: 2rem;
+    text-align: center;
+  }
+}

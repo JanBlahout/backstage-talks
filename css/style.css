@@ -1,0 +1,276 @@
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #251d20; }
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: #251d20; }
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table; }
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  max-width: 1180px;
+  /* 1 */
+  margin-left: auto;
+  /* 2 */
+  margin-right: auto;
+  /* 2 */
+  padding-left: 20px;
+  /* 3 */
+  padding-right: 20px;
+  /* 3 */
+  width: 100%;
+  /* 1 */ }
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0;
+  /* 1 */
+  text-indent: 101%;
+  white-space: nowrap; }
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.bold-text {
+  font-weight: 700; }
+
+.logo__img {
+  position: fixed;
+  top: 2rem;
+  left: 1.5rem;
+  max-width: 26rem; }
+  @media only screen and (max-width: 1000px) {
+    .logo__img {
+      position: absolute; } }
+  @media only screen and (max-width: 770px) {
+    .logo__img {
+      width: 160px; } }
+
+.footer {
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+  width: 320px; }
+  .footer__text {
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 25px; }
+  .footer__copyright {
+    margin-top: 1rem;
+    font-size: 1.3rem; }
+  .footer__published {
+    color: #251d20; }
+    .footer__published:hover {
+      text-decoration: none; }
+  .footer__policy {
+    display: inline-block;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: underline; }
+    .footer__policy:visited, .footer__policy:active {
+      color: #251d20; }
+    .footer__policy:hover {
+      text-decoration: none; }
+  @media only screen and (max-width: 1000px) {
+    .footer {
+      position: absolute;
+      left: 2rem;
+      bottom: 2rem; } }
+  @media only screen and (max-width: 770px) {
+    .footer {
+      width: 100%;
+      left: 0;
+      padding: 0 30px;
+      text-align: center;
+      margin: 0 auto 40px; } }
+
+.contact {
+  position: fixed;
+  top: 2rem;
+  right: 1.5rem; }
+  .contact__link {
+    font-size: 1.8rem;
+    color: #251d20;
+    text-decoration: none;
+    font-weight: 700; }
+    .contact__link:hover {
+      text-decoration: underline; }
+  @media only screen and (max-width: 1000px) {
+    .contact {
+      position: absolute;
+      top: unset;
+      right: 2rem;
+      bottom: 2rem; } }
+  @media only screen and (max-width: 770px) {
+    .contact {
+      width: 100%;
+      top: unset;
+      right: unset;
+      bottom: 2rem;
+      text-align: center; } }
+
+.navigation {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.5rem; }
+  .navigation__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; }
+  .navigation__link {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #251d20;
+    transition: all 0.3s; }
+  @media only screen and (max-width: 1000px) {
+    .navigation {
+      display: none; } }
+
+.section-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+  transition: all 1s;
+  scroll-behavior: smooth;
+  overflow-y: scroll; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */ }
+
+@media only screen and (max-width: 1000px) {
+  .section-container {
+    position: relative;
+    height: 100%; } }
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: white;
+  scroll-snap-stop: always;
+  transition: background-color 1s; }
+  section h1 {
+    font-size: 1.8rem;
+    color: #251d20;
+    margin-top: -3rem; }
+  section .orin {
+    font-size: 1.5rem;
+    color: #251d20;
+    font-weight: 700; }
+  section .stores {
+    color: white;
+    text-decoration: none; }
+    section .stores:hover {
+      text-decoration: underline; }
+  section .buyhere {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem; }
+    section .buyhere:hover {
+      text-decoration: underline; }
+
+img {
+  width: 420px; }
+  @media only screen and (max-width: 770px) {
+    img {
+      max-width: 90%; } }
+
+.section5 {
+  width: 100%;
+  height: 100vh;
+  background-color: #00c1b5;
+  scroll-snap-align: start; }
+
+.section4 {
+  width: 100%;
+  height: 100vh;
+  background-color: #ff651a;
+  scroll-snap-align: start; }
+
+.section3 {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffbe00;
+  scroll-snap-align: start; }
+
+.section2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #1d3fbb;
+  scroll-snap-align: start; }
+
+.section1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #e30512;
+  scroll-snap-align: start; }

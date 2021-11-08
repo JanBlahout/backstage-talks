@@ -1,0 +1,121 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.section-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  // overflow-x: hidden;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  transition: all 1s;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.section-container {
+  @media only screen and (max-width: 1000px) {
+    position: relative;
+    height: 100%;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: white;
+  scroll-snap-stop: always;
+  transition: background-color 1s;
+
+  h1 {
+    font-size: 1.8rem;
+    color: $text-color;
+    margin-top: -3rem;
+  }
+
+  .orin {
+    font-size: 1.5rem;
+    color: $text-color;
+    font-weight: 700;
+  }
+
+  .stores {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .buyhere {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+img {
+  width: 420px;
+
+  @media only screen and (max-width: 770px) {
+    max-width: 90%;
+  }
+}
+
+.section5 {
+  width: 100%;
+  height: 100vh;
+  background-color: $color-blue-bright;
+  scroll-snap-align: start;
+
+  // &__img {
+  //   width: 420px;
+  // }
+}
+
+.section4 {
+  width: 100%;
+  height: 100vh;
+  background-color: $color-orange;
+  scroll-snap-align: start;
+}
+
+.section3 {
+  width: 100%;
+  height: 100vh;
+  background-color: $color-yellow;
+  scroll-snap-align: start;
+}
+
+.section2 {
+  width: 100%;
+  height: 100vh;
+  background-color: $color-purple;
+  scroll-snap-align: start;
+}
+
+.section1 {
+  width: 100%;
+  height: 100vh;
+  background-color: $color-red;
+  scroll-snap-align: start;
+}
