@@ -139,9 +139,10 @@ body {
     .footer {
       width: 100%;
       left: 0;
-      padding: 0 30px;
+      padding: 0 30px 40px;
       text-align: center;
-      margin: 0 auto 40px; } }
+      margin: 0 auto;
+      background-color: #e30512; } }
 
 .contact {
   position: fixed;
@@ -166,7 +167,8 @@ body {
       top: unset;
       right: unset;
       bottom: 2rem;
-      text-align: center; } }
+      text-align: center;
+      background-color: #e30512; } }
 
 .navigation {
   position: fixed;
@@ -278,3 +280,6 @@ img {
   height: 100vh;
   background-color: #e30512;
   scroll-snap-align: start; }
+  @media only screen and (max-width: 770px) {
+    .section1 {
+      margin-bottom: 200px; } }

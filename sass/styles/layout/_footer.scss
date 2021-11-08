@@ -56,8 +56,9 @@
   @media only screen and (max-width: 770px) {
     width: 100%;
     left: 0;
-    padding: 0 30px;
+    padding: 0 30px 40px;
     text-align: center;
-    margin: 0 auto 40px;
+    margin: 0 auto;
+    background-color: $color-red;
   }
 }
