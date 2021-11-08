@@ -231,7 +231,8 @@ section {
   section .orin {
     font-size: 1.5rem;
     color: #251d20;
-    font-weight: 700; }
+    font-weight: 700;
+    text-align: center; }
   section .stores {
     color: white;
     text-decoration: none; }
