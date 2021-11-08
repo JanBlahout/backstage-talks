@@ -209,8 +209,10 @@ body {
   background: transparent;
   /* Optional: just make scrollbar invisible */ }
 
-.section-container {
-  position: relative; }
+@media only screen and (max-width: 1000px) {
+  .section-container {
+    position: relative;
+    height: 100%; } }
 
 section {
   display: flex;
