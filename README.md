@@ -1,7 +1,7 @@
 # Challenge
 
-Inspiration taken from https://www.frontendpractice.com/. Challenge is to duplicate the website. 
+Inspiration taken from https://www.frontendpractice.com/project/backstage-talks. Challenge is to duplicate the website. 
 
 # LIVE SITE
-- no responsive design
-https://elated-torvalds-974943.netlify.app/
+- responsive design
+https://eager-minsky-fd2381.netlify.app/
